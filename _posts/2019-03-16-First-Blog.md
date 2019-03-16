@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      My first post
+title:      My First Post
 subtitle:   Hello, World
 date:       2019-03-16
 author:     Xiaolu
