@@ -4,7 +4,7 @@ title:      My First Post
 subtitle:   Hello, World
 date:       2019-03-16
 author:     Xiaolu
-header-img: img/post-bg-cook.jpg
+header-img: img/post-bg-first.jpg
 catalog: true
 tags:
     - 生活
