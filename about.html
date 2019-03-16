@@ -20,7 +20,9 @@ header-img: "img/about-bg.jpg"
 
     <p>Hey，我是<strong>李小路</strong>，一个厦大WISE的学生。</p>
 
-    <p>工作、学习之余，我还是一个健身爱好者。</p>
+    <p>经济学学生，电影爱好者，健身小白，伪硬核游戏玩家……</p>
+    
+    <p>这个博客会发布我课程的作业，以及我能想到的、感兴趣的任何东西。</p>
 
     <p>这是我的利用 <a href="https://pages.github.com/">GitHub Pages</a> 与 <a href="http://jekyll.com.cn/">Jekyll</a> 搭建的个人博客。
 
@@ -98,36 +100,7 @@ header-img: "img/about-bg.jpg"
 </script>
 
 
-<!-- Gitalk 评论 start  -->
-{% if site.gitalk.enable %}
-<!-- Gitalk link  -->
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
 
-<div id="gitalk-container"></div>
-    <script type="text/javascript">
-    var gitalk = new Gitalk({
-    clientID: '{{site.gitalk.clientID}}',
-    clientSecret: '{{site.gitalk.clientSecret}}',
-    repo: '{{site.gitalk.repo}}',
-    owner: '{{site.gitalk.owner}}',
-    admin: ['{{site.gitalk.admin}}'],
-    distractionFreeMode: {{site.gitalk.distractionFreeMode}},
-    id: 'about',
-    });
-    gitalk.render('gitalk-container');
-</script>
-{% endif %}
-<!-- Gitalk end -->
-
- <!-- disqus 评论框 start  -->
-{% if site.disqus.enable %}
-
-<div class="comment">
-    <div id="disqus_thread" class="disqus-thread">
-    </div>
-</div>
-<!-- disqus 评论框 end -->
 
 <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
