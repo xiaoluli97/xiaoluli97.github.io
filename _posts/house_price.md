@@ -1,3 +1,14 @@
+---
+layout:     post
+title:      Regularization--Prediction of House Price
+subtitle:   Assignment 3
+date:       2019-04-20
+author:     Xiaolu
+header-img: img/post-bg-da.jpg
+catalog: true
+tags:
+    - Data Analysis
+---
 
 ## Introduction
 
@@ -11,7 +22,7 @@ Data source: [Kaggle](https://www.kaggle.com/c/house-prices-advanced-regression-
 
 Data cleaning process is based on the methods provided by [juliencs](https://www.kaggle.com/juliencs/a-study-on-regression-applied-to-the-ames-dataset) since we mainly focus on regularization regressions in this report instead of tedious data cleaning.
 
-For the original and clean data, please click here.
+For the original data and code, please [click here](https://github.com/xiaoluli97/xiaoluli97.github.io/tree/master/assets/house%20price).
 
 ## Data Preprocessing
 
@@ -62,7 +73,7 @@ train = train[train.GrLivArea < 4000]
 ```
 
 
-![png](house_price_files/house_price_6_0.png)
+![png](/img/post-img-house1.png)
 
 
 
@@ -467,7 +478,7 @@ print('Corresponding accuracy on test set:',max(scoreList1))
 ```
 
 
-![png](house_price_files/house_price_24_0.png)
+![png](/img/post-img-house2.png)
 
 
     The best alpha value for Ridge: 13
@@ -508,7 +519,7 @@ print('Corresponding accuracy on test set:',max(scoreList2))
 ```
 
 
-![png](house_price_files/house_price_27_0.png)
+![png](/img/post-img-house3.png)
 
 
     The best alpha value for Lasso: 6 * 0.0001
@@ -544,7 +555,7 @@ plt.show()
 ```
 
 
-![png](house_price_files/house_price_31_0.png)
+![png](/img/post-img-house4.png)
 
 
 We can see that the most two important positive variable are `GrLivArea` (Above grade (ground) living area square feet) and `OverallCond` (Rates the overall condition of the house), which totally make sense. The most two important negative factors, `MSZoning_C` (Identifies the general zoning classification of the sale) and `SaleCondition_Abnormal` (Abnormal Sale -  trade, foreclosure, short sale) also have strong explanatory power to house price intuitively.
