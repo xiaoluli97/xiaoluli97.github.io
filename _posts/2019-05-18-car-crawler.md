@@ -234,7 +234,7 @@ def getPage(url):
 ```python
 url='http://www.miit.gov.cn/datainfo/viewCar?carId={}'
 all_car=[]
-for i in range(3501,len(code_clean)):
+for i in range(0,len(code_clean)):
     if i%100==0:
         each_car_url=url.format(code_clean[i])
         each_car=getPage(each_car_url)
