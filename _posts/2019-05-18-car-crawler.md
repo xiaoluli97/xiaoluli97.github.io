@@ -235,7 +235,7 @@ def getPage(url):
 url='http://www.miit.gov.cn/datainfo/viewCar?carId={}'
 all_car=[]
 for i in range(0,len(code_clean)):
-    if i%100==0:
+    if i%100==0:        #每爬取100个页面信息进行一次记录和储存
         each_car_url=url.format(code_clean[i])
         each_car=getPage(each_car_url)
         all_car.append(each_car)
@@ -248,7 +248,7 @@ for i in range(0,len(code_clean)):
         each_car_url=url.format(code_clean[i])
         each_car=getPage(each_car_url)
         all_car.append(each_car)
-        time.sleep(random.randint(0,2))
+        time.sleep(random.randint(0,2)) #防止过快抓取
 ```
 
     
