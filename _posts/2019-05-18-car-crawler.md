@@ -1,4 +1,14 @@
-
+---
+layout:     post
+title:      车辆信息爬取
+subtitle:   爬虫说明
+date:       2019-05-18
+author:     Xiaolu
+header-img: img/post-bg-da.jpg
+catalog: true
+tags:
+    - Python - 爬虫
+---
 ## 简介
 
 这是一个用于[第320批《道路机动车辆生产企业及产品公告》新产品公示](http://www.miit.gov.cn/datainfo/resultSearch?searchType=advancedSearch&categoryTreeId=1128)信息爬取的爬虫程序。
@@ -216,7 +226,7 @@ def getPage(url):
 
 ```
 
-## 结合车辆ID抓取信息
+## 执行爬取程序
 
 之前我们获得了每辆车的页面ID，通过循环调用ID可以进入到每辆车的信息页面之中，然后再调用以上定义的页面抓取函数便可以把所有页面的信息抓取下来并储存到本地。
 
@@ -241,6 +251,4 @@ for i in range(3501,len(code_clean)):
         time.sleep(random.randint(0,2))
 ```
 
-    100
-    2019-05-18 18:15:01.591703
     
