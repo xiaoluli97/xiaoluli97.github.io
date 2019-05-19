@@ -150,20 +150,23 @@ def getPage(url):
 url='http://www.miit.gov.cn/datainfo/viewCar?carId={}'
 all_car=[]
 for i in range(0,len(code_clean)):
-    if i%100==0:        #每爬取100个页面信息进行一次记录和储存
-        each_car_url=url.format(code_clean[i])
-        each_car=getPage(each_car_url)
-        all_car.append(each_car)
-        print(len(all_car)) 
-        print(datetime.datetime.now())
-        df=pd.DataFrame(all_car)
-        df.to_csv('C:/Documents/all_car.csv',index=False,header=True,encoding='utf_8_sig')
-        time.sleep(random.randint(60,120))        
-    else:
-        each_car_url=url.format(code_clean[i])
-        each_car=getPage(each_car_url)
-        all_car.append(each_car)
-        time.sleep(random.randint(0,2)) #防止过快抓取
+    each_car_url=url.format(code_clean[i])
+    while True:        #不断尝试直到成功访问
+            try:
+                each_car=getPage(each_car_url)
+            except requests.exceptions.ConnectionError:         #连接异常处理，保证程序持续运行
+                print('ConnectionError -- please wait 3 seconds')
+                time.sleep(3)
+            else:
+                all_car.append(each_car)
+                if i%100==0 or i==len(code_clean)-1:
+                    print(len(all_car)) 
+                    print(datetime.datetime.now())
+                    df=pd.DataFrame(all_car)
+                    df.to_csv('C:/Documents/all_car.csv',index=False,header=True,encoding='utf_8_sig')
+                else:
+                    time.sleep(random.randint(0,2))  #防止访问速度过快
+                break
 ```
 
     
