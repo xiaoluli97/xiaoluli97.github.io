@@ -4,7 +4,7 @@ title:      车辆信息爬取
 subtitle:   爬虫说明
 date:       2019-05-18
 author:     Xiaolu
-header-img: img/post-bg-da.jpg
+header-img: img/post-bg-car.jpg
 catalog: true
 tags:
     - Python - 爬虫
